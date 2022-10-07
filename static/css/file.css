@@ -1,0 +1,121 @@
+body{
+    background-color : LightGoldenrodYellow;
+  }
+
+  table{
+    background-color: #FFE87C;
+    border-style: solid;
+    border-color: #4d3e00;
+    position: absolute;
+    top: 25px;
+    left: 390px;
+    padding: 20px 30px 20px;
+    font-family: "Comic Sans MS", cursive;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+    box-shadow: 20px 20px 50px 15px grey;
+   
+  }
+  
+
+  div.right{
+    float: right;
+    border-style: solid;
+    position: absolute;
+    top: 130px;
+    left: 1170px;
+    right:25px;
+    padding: 10px 10px 10px;
+    font-size: 17px;
+    font-family: 'Brush Script MT', cursive;
+    background-color: #ffe366;
+   
+   
+
+  }
+
+  div.left{
+    background-color: #ffe366;
+    float: left;
+    border-style: solid;
+    position: absolute;
+    top: 130px;
+    left: 40px;
+    right:1195px;
+    padding: 10px 10px 10px;
+    font-size: 17px;
+    font-family: 'Brush Script MT', cursive;
+
+
+  }
+
+ 
+ h3.caption{
+    font-weight: bold;
+    color: #4d3e00;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 40px;
+ }
+ h3.output{
+  font-size: 25px;
+ }
+
+ .predictbutton{
+  background-color:white;
+  border-radius:5px;
+  border-color:black; 
+  color: black;
+  padding: 6px 20px;
+  text-align: center;
+  font-size: 14px;
+  margin: 0px 2px;
+  transition: 0.3s;
+  font-weight: bold;
+  font-family: Gill Sans, serif;
+    }
+    .predictbutton:hover{
+      background-color: #997d00;
+      color: white;
+  
+
+    }
+
+   .textbox{
+    
+    height:19px;
+    width: 150px;
+    border-color: black; 
+    border-style: double;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-family: "Comic Sans MS", cursive;
+
+  }
+  .textbox:hover{
+    
+    background-color: #997d00;
+  color: white;
+  border-radius: 7px;
+  }
+  
+
+  
+  .selectbox{
+    
+    height:26px;
+    width: 180px;
+    border-color: black;
+    border-style: double; 
+    border-width: 2px;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-family: "Comic Sans MS", cursive;
+
+  }
+  .selectbox:hover{
+    
+    background-color: #997d00;
+  color: white;
+  border-radius: 7px;
+}

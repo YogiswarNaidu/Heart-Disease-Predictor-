@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <title>Predict Heart Disease</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/file.css')}}">
+	
+</head>
+ 
+  <body> 
+    
+  
+  <table>
+    <form action="\predict" method="post"> 
+
+    <caption><h3 class="caption"> Heart Disease Predictor</h3></caption>
+    <tr>
+
+    <td>Age : <input type="text" class="textbox" name="Age"  required><br><br></td>
+
+    <td>Gender : <select class="selectbox" name="Sex" required>
+     <option value="" disabled selected hidden>Select Gender</option>
+    <option value="F">Female</option>
+    <option value="M">Male</option>
+  </select><br><br></td>
+</tr>
+<tr>
+
+   <td>Chest Pain Type : <select class="selectbox" name="ChestPainType" required>
+     <option value="" disabled selected hidden>Select Chest Pain Type</option>
+    <option value="ASY">Asymptomatic</option>
+    <option value="ATA">Atypical Angina</option>
+    <option value="NAP">Non-Anginal Pain</option>
+    <option value="TA">Typical Angina</option>
+  </select><br><br></td>
+
+  <td>Resting BP : <input type="text" class="textbox" name="RestingBP"  required><br><br></td>
+</tr>
+<tr>
+
+  <td>Cholesterol : <input type="text" class="textbox" name="Cholesterol"  required><br><br></td>
+  
+  <td>FastingBS : <input type="text" class="textbox" name="FastingBS"  required><br><br></td>
+</tr>
+<tr>
+   <td>Resting ECG : <select class="selectbox" name="RestingECG" required>
+    <option value="" disabled selected hidden>Select Resting ECG</option>
+    <option value="LVH">LVH</option>
+    <option value="Normal">Normal</option>
+    <option value="ST">ST</option>
+  </select><br><br></td>
+
+  <td>MaxHR : <input type="text" class="textbox" name="MaxHR"  required><br><br></td>
+</tr>
+<tr>
+  <td>Exercise Angina : <select class="selectbox" name="ExerciseAngina" required>
+    <option value="" disabled selected hidden>Select Exercise Angina</option>
+    <option value="N">No</option>
+    <option value="Y">Yes</option>
+  </select><br><br></td>
+
+ <td>Oldpeak : <input type="text" class="textbox" name="Oldpeak"  required><br><br></td>
+</tr>
+<tr>
+  <td>ST Slope : <select class="selectbox" name="ST_Slope" required>
+    <option value="" disabled selected hidden>Select ST Slope</option>
+    <option value="Down">Down</option>
+    <option value="Flat">Flat</option>
+    <option value="Up">Up</option>
+  </select><br></td>
+
+  
+  <td><input type="submit" class="predictbutton" value="Predict"></td>
+</tr>
+
+</form>
+
+     <tr><td colspan="2"><h3 class="output">{{ prediction_texts }}</h3></td></tr>
+
+</table>
+
+
+  <div class="left">
+
+    <h5>
+      1. Age: Age of the patient.<br><br>
+      2. Gender: Gender of the patient.<br><br>
+      3. Chest pain type [TA: Typical Angina, ATA: Atypical Angina, NAP: Non-Anginal Pain, ASY: Asymptomatic].<br><br>
+      4. RestingBP: The person’s resting blood pressure (mm Hg on admission to the hospital).<br><br>
+      5. Cholesterol: The person’s cholesterol measurement in mg/dl.<br><br>
+      6. FastingBS: The person’s fasting blood sugar ( >120 mg/dl, 1 = true; 0 = false).<br>
+    </h5>
+
+  </div>
+
+  <div class ='right'>
+    <h5>
+     7. Resting ECG : LVH - Showing probable or definite left ventricular hypertrophy by Estes’ criteria; Normal; ST : Having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV).<br><br>
+     8. MaxHR: The person’s maximum heart rate achieved [Numeric value between 60 and 202].<br><br>
+     9. Exercise Angina: Exercise induced angina.<br><br>
+    10. Oldpeak: ST depression induced by exercise relative to rest (‘ST’ relates to positions on the ECG plot) [Numeric value measured in depression].<br><br>
+    11. ST_Slope: The slope of the peak exercise ST segment [Up: upsloping, Flat: flat, Down: downsloping].<br><br>
+    12. HeartDisease: 1- Person has Heart Disease; 0- Person dosenot has Heart Disease.<br>
+
+    </h5>
+
+  </div>
+
+ 
+  </body>
+</html>
